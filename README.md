@@ -1,4 +1,4 @@
-# Human-Resources-Analytics
+# Human-Resources-Analytics based on Random Forest
 
 ### Introduction 
 This repo is my EE-551-Spring individual project. | Name: Bowen Li
