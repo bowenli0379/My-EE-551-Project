@@ -17,3 +17,26 @@ Numpy, Pandas, Matplotlib, Seaborn, Scitlearn
 
 ### Model
 Random Forest
+
+### TODO List
+Step1: Exploratory Data Analysis
+- Find out the type of feature.
+- Check if there are some missing values.
+- Plot the distribution of features.
+
+Step2: Data Preprocessing
+- Process missing values.
+- Process categorical features.
+
+Step 3: Feature Engineering
+- Feature selection
+
+Step 4: Model Selection and Training
+- Choose model (Random Forest)
+- Train model (Cross Validation)
+
+Step 5: Evaluate Model
+- Define importance score.
+
+Step 6: Other Models
+- K-means, Logistic Regression or other models.
