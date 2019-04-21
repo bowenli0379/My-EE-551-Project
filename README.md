@@ -19,15 +19,14 @@ Numpy, Pandas, Matplotlib, Seaborn, Scitlearn
 Random Forest, K-means
 
 ## TODO List
-    Step1: Exploratory Data Analysis
-    - Find out the type of features.   
-    `Total amount of data is 14,999 which contains 9 independent variables and 1 dependent variable`
-    - View the basics of the data.  
-    ```Python
-    df.info()
-    df.describe()
-    ```
-    - Plot the distribution of features.
+Step1: Exploratory Data Analysis   
+- Find out the type of features.   
+`Total amount of data is 14,999 which contains 9 independent variables and 1 dependent variable`   
+- View the basics of the data.   
+```Python
+df.info()
+df.describe()
+```
 
 Step2: Data Preprocessing
 - Process missing values.
