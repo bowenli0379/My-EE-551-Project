@@ -4,25 +4,30 @@
 This repo is my EE-551-Spring individual project. | Name: Bowen Li
 
 ### Proposals
-In this project, I will use the relevant data set on Kaggle website to establish a Random Forest model to find out the key factors that affact the turnover of employers in an enterprise. Combining these variables into a single indicator will help the company to understand which employees need to be focused on and forecast the employees on the job, and judge the probability of their leaving.
+In this project, I will use the relevant data set on Kaggle website to establish a Random Forest model to find out the key factors that affact the turnover of employers in an enterprise.Combining these variables into a single indicator will help the company to understand which employees need to be focused on and forecast the employees on the job, and judge the probability of their leaving. At the end, I used K-means to do a further analysis.
 
-### Dataset
+## Dataset
 https://www.kaggle.com/jiangzuo/hr-comma-sep/version/1
 
-### Tools
+## Tools
 Anaconda, Jupyternotebook
 
-### Library
+## Library
 Numpy, Pandas, Matplotlib, Seaborn, Scitlearn
 
-### Model
-Random Forest
+## Model
+Random Forest, K-means
 
-### TODO List
-Step1: Exploratory Data Analysis
-- Find out the type of feature.
-- Check if there are some missing values.
-- Plot the distribution of features.
+## TODO List
+    Step1: Exploratory Data Analysis
+    - Find out the type of features.   
+    `Total amount of data is 14,999 which contains 9 independent variables and 1 dependent variable`
+    - View the basics of the data.  
+    ```Python
+    df.info()
+    df.describe()
+    ```
+    - Plot the distribution of features.
 
 Step2: Data Preprocessing
 - Process missing values.
