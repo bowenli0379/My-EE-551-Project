@@ -84,7 +84,7 @@ from sklearn.model_selection import GridSearchCV
 print('Test score:', best_rf.score(X_test, y_test))
 ```
 
-### Step 5: Find Out the Key Factors
+### Step 5: Find Out Key Factors
 - Compute importance score.
 ```Python
 feature_importances = best_rf.feature_importances_
