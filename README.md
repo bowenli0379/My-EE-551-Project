@@ -83,6 +83,10 @@ from sklearn.model_selection import GridSearchCV
 ```Python
 print('Test score:', best_rf.score(X_test, y_test))
 ```
+- Make a prediction of leaving with test set
+```Python
+results = rf_grid.predict_proba(X_test)
+```
 
 ### Step 5: Find Out Key Factors
 - Compute importance score.
