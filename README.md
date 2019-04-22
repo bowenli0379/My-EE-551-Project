@@ -70,7 +70,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import ShuffleSplit
 ```
 
-### Step 4: Model Training and Selection
+### Step 4: Model Training, Selection and Testing
 - Train the model through RandomForest
 ```Python
 from sklearn.ensemble import RandomForestClassifier
@@ -79,7 +79,7 @@ from sklearn.ensemble import RandomForestClassifier
 ```Python
 from sklearn.model_selection import GridSearchCV
 ```
-- Compute the best test score.
+- Test the model using test set and compute the score.
 ```Python
 print('Test score:', best_rf.score(X_test, y_test))
 ```
