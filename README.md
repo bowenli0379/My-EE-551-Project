@@ -6,20 +6,18 @@ This repo is my EE-551-Spring individual project. | Name: Bowen Li
 ## Proposals
 In this project, I will use the relevant data set on Kaggle website to establish a Random Forest model to find out the key factors that affact the turnover of employers in an enterprise. Combining these variables into a single indicator will help the company to understand which employees need to be focused on and forecast the employees on the job, and judge the probability of their leaving. At the end, I used K-means to do a further improvement.
 
-## Dataset
+## Preparation
+- Dataset   
 https://www.kaggle.com/jiangzuo/hr-comma-sep/version/1
-
-## Tools
+- Tools   
 Anaconda, Jupyternotebook
-
-## Library
+- Library   
 Numpy, Pandas, Matplotlib, Seaborn, Scitlearn
-
-## Model
+- Model   
 RandomForest, K-means
 
 ## Main Process
-Step1: Data Exploratory 
+### Step1: Data Exploratory 
 - Find out the type of features.   
 ```
 Total amount of data is 14,999 which contains 9 independent variables and 1 dependent variable.
@@ -34,7 +32,7 @@ df.describe()
 df.corr()
 ```
 
-Step2: Data Visualization
+### Step2: Data Visualization
 - Plot the distributions of left using catplot.
 ```Python
 plot = sns.catplot(x='department', y='left', kind='bar', data=df)
@@ -53,7 +51,7 @@ plt.hist(df[df['left']==1]['satisfaction_level'], bins=bins, alpha=0.7, label='E
 plt.hist(df[df['left']==0]['satisfaction_level'], bins=bins, alpha=0.5, label='Employees Stayed')
 ```
 
-Step 3: Feature Engineering
+### Step 3: Feature Engineering
 - One-hot Encoding.
 ```Python
 salary_dummy = pd.get_dummies(df['salary'])
@@ -72,7 +70,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import ShuffleSplit
 ```
 
-Step 4: Model Training and Selection
+### Step 4: Model Training and Selection
 - Train the model through RandomForest
 ```Python
 from sklearn.ensemble import RandomForestClassifier
@@ -86,7 +84,7 @@ from sklearn.model_selection import GridSearchCV
 print('Test score:', best_rf.score(X_test, y_test))
 ```
 
-Step 5: Find Out the Key Factors
+### Step 5: Find Out the Key Factors
 - Compute importance score.
 ```Python
 feature_importances = best_rf.feature_importances_
@@ -97,7 +95,7 @@ features_df = pd.DataFrame({'Features': features, 'Importance Score': feature_im
 features_df.sort_values('Importance Score', inplace=True, ascending=False)
 ```
 
-Step 6: Further Analysis and Reproduction
+### Step 6: Further Analysis and Reproduction
 - Make a classification through K-means
 ```
 from sklearn.cluster import KMeans
