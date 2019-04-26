@@ -4,7 +4,7 @@
 This repo is my EE-551-Spring individual project. | Name: Bowen Li
 
 ## Proposals
-In this project, I will use the relevant data set on Kaggle website to establish a Random Forest model to find out the key factors that affact the turnover of employers in an enterprise. Combining these variables into a single indicator will help the company to understand which employees need to be focused on and forecast the employees on the job, and judge the probability of their leaving. At the end, I used K-means to do a further improvement.
+In this project, I will use the relevant data set on Kaggle website to establish a Random Forest model to find out the key factors that affect the turnover of employers in an enterprise. Combining these variables into a single indicator will help the company to understand which employees need to be focused on and forecast the employees on the job, and judge the probability of their leaving. At the end, I used K-means to do a further improvement.
 
 ## Preparation
 - Dataset   
@@ -70,7 +70,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import ShuffleSplit
 ```
 
-### Step 4: Model Training, Selection and Testing
+### Step 4: Model Training, Selection, Evaluation, Testing and Prediction
 - Train the model through RandomForest
 ```Python
 from sklearn.ensemble import RandomForestClassifier
@@ -78,6 +78,10 @@ from sklearn.ensemble import RandomForestClassifier
 - Select the best parameter through GridSearchCV
 ```Python
 from sklearn.model_selection import GridSearchCV
+```
+- Use Confusion Matrix to evaluate the model
+```Python
+from sklearn.metrics import confusion_matrix
 ```
 - Test the model using test set and compute the score.
 ```Python
